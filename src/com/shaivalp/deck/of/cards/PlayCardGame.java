@@ -1,0 +1,17 @@
+package com.shaivalp.deck.of.cards;
+
+public class PlayCardGame {
+
+	public static void main(String[] args) {
+		
+		CardGameFactory gameFactory = new CardGameFactory();
+		int numberOfPlayer = 3;
+		
+		PockerGame pockerGame =  (PockerGame) gameFactory.getCardGame(CardGameType.POCKER, numberOfPlayer);
+		pockerGame.initializeDeck();
+		
+		
+
+	}
+
+}
