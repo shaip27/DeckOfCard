@@ -10,7 +10,12 @@ public class PlayCardGame {
 		PockerGame pockerGame =  (PockerGame) gameFactory.getCardGame(CardGameType.POCKER, numberOfPlayer);
 		pockerGame.initializeDeck();
 		
-		
+		boolean success = pockerGame.dealInitial();
+		if (!success) {
+			System.out.println("Out of cards.");
+		} else {
+			System.out.println("-- Initialized Pocker Hands --");
+		}
 
 	}
 

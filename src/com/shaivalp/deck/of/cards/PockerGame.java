@@ -28,4 +28,17 @@ public class PockerGame extends CardGame {
 		deck.initDeckOfCards(cards);
 		deck.shuffle();	
 	}
+
+	public boolean dealInitial() {
+		for (PockerHand hand : hands) {
+			PockerCard card1 = deck.dealCard();
+			PockerCard card2 = deck.dealCard();
+			if (card1 == null || card2 == null) {
+				return false;
+			}
+			hand.addCard(card1);
+			hand.addCard(card2);	
+		}
+		return true;
+	}
 }
