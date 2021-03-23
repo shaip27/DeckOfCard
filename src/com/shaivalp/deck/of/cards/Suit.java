@@ -27,7 +27,7 @@ public enum Suit {
 		case 3: 
 			return Suit.SPADE;
 		default:
-				return null;
+			return null;
 		}
 	}
 }

@@ -1,10 +1,9 @@
 package com.shaivalp.deck.of.cards;
 
+import java.util.ArrayList;
+
 public class PockerHand extends Hand<PockerCard> {
-	
-	public int score() {
-		return 0;
-	}
+
 	
 	public boolean isRoyalFlush() {
 		return false;

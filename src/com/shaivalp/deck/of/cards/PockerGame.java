@@ -6,6 +6,7 @@ public class PockerGame extends CardGame {
 	
 	private Deck<PockerCard> deck;
 	private PockerHand[] hands;
+	private PockerHand riverHand;
 	
 	public PockerGame(int numPlayers) {
 		hands = new PockerHand[numPlayers];
@@ -40,5 +41,24 @@ public class PockerGame extends CardGame {
 			hand.addCard(card2);	
 		}
 		return true;
+	}
+	
+	public boolean riverInitial() {
+		riverHand = new PockerHand();
+		for(int i =0;i < 5; i++) {
+			PockerCard reiverCard = deck.dealCard();
+			riverHand.addCard(reiverCard);
+		}
+		return true;
+	}
+	
+	public void printHandsAndScore() {
+		for (int i = 0; i < hands.length; i++) {
+			System.out.print("Hand " + i + " (" + hands[i].score() + "): ");
+			hands[i].print();
+			System.out.println("");
+		}
+		System.out.print("River Hand  (" + riverHand.score() + "): ");
+		riverHand.print();
 	}
 }

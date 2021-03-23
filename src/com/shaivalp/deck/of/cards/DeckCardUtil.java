@@ -1,12 +1,13 @@
 package com.shaivalp.deck.of.cards;
 
-import java.util.Random;
-
 public class DeckCardUtil {
 	
+	public static int randomInt(int n) {
+		return (int) (Math.random() * n);
+	}
+	
 	public static int getRandomIntInRange(int min, int max) {
-		 Random random = new Random();
-		 return random.nextInt(max - min) + min;
+		return randomInt(max + 1 - min) + min;
 	}
 
 }

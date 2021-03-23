@@ -16,7 +16,15 @@ public class PlayCardGame {
 		} else {
 			System.out.println("-- Initialized Pocker Hands --");
 		}
-
+		
+		if (!pockerGame.riverInitial()) {
+			System.out.println("Out of cards.");
+		} else {
+			System.out.println("-- Initialized Pocker River --");
+		}
+		
+		pockerGame.printHandsAndScore();
+		
 	}
 
 }

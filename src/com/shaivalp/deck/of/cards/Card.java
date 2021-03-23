@@ -31,16 +31,16 @@ public abstract class Card {
 		System.out.print(faceValues[faceValue - 1]);
 		switch (suit) {
 		case CLUB:
-			System.out.print("c");
+			System.out.print("C");
 			break;
 		case HEART:
-			System.out.print("h");
+			System.out.print("H");
 			break;
 		case DIAMOND:
-			System.out.print("d");
+			System.out.print("D");
 			break;
 		case SPADE:
-			System.out.print("s");
+			System.out.print("S");
 			break;			
 		}
 		System.out.print(" ");
